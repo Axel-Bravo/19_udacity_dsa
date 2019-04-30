@@ -20,3 +20,22 @@ Print a message:
 September 2016.".
 """
 
+if __name__ == '__main__':
+    telephone_time = dict()
+    for call in calls:
+        for call_element in [0, 1]:
+            if call[call_element] in telephone_time:  # Telephone already in our dictionary
+                telephone_time[call[call_element]] += int(call[3])
+            else:  # Telephone not in our dictionary
+                telephone_time[call[call_element]] = int(call[3])
+
+    max_call_time = 0
+    max_telephone_num = ''
+
+    for telephone in telephone_time:
+        if telephone_time[telephone] >= max_call_time:
+            max_call_time = telephone_time[telephone]
+            max_telephone_num = telephone
+
+    print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(
+        max_telephone_num, max_call_time))
