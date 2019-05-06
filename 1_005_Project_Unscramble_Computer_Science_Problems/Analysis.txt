@@ -1,33 +1,34 @@
-# Run time analisys
+# Run time analysis
 This file explains the n time analysis (Worst Case Big O Notation) for each solution they produced. 
-Analysis will leave appart the load of the current files, and focus on the __algorithm execution__.
- [Python time complexity](https://wiki.python.org/moin/TimeComplexity), information has been used as
-  a refenrence.
+Analysis will leave apart the load of the current files, and focus on the __algorithm execution__.
+[Python time complexity](https://wiki.python.org/moin/TimeComplexity), information has been used as
+a reference.
 
 ## Task0
-This taks runs in __O(1)__, due to the fact that _acces_ on a Python array has O(1), and there are 
+This takes runs in __O(1)__, due to the fact that _access_ on a Python array has O(1), and there are
 two lines executing accesses to lists
 
 ## Task1
-This taks runs in __O(n)__, due to the fact that we access seuquentially both files for two of their
- columns, resulting in `2*2*O(n) -> O(n)`
+This takes runs in __O(n)__, due to the fact that we access sequentially both files for two of their
+columns, resulting in `2*2*O(n) -> O(n)`
 
 ## Task2
-This taks runs in __O(n)__, due to the fact that we find many operations that are __O(1)__ as 
-the different elemen are modified. Additionally there are several _full scans thorough the lists_,
- which have __O(n)__ time complexity. Though they add up to some value of `x * O(n)`, we end up
-  simplyfiying them into `O(n)`.
+This takes runs in __O(n)__, due to the fact that we find many operations that are __O(1)__ as
+the different elements are modified. Additionally there are several _full scans thorough the lists_,
+which have __O(n)__ time complexity. Though they add up to some value of `x * O(n)`, we end up
+simplifying them into `O(n)`.
 
 ## Task3
-This taks runs in __O(n)__, due to the fact that we find many operations that are __O(1)__ as the 
-different elemen are modified. Additionally, there are some operations with a _time complexity_ nor
- fixed neither linear, has the __list sort__ O(n log n). Finally, there are several _full scans 
- thorough the lists_, which have __O(n)__ time complexity. Though they add up to some value of 
- `x * O(n)`, we end up simplyfiying them into `O(n)`.
+This takes runs in __O(n log n)__, due to the fact that we find list sorting operations, which have
+a time complexity of __O(n log n)__. In the code we find many operations that are __O(1)__ as
+the different elements are modified. Additionally there are several _full scans thorough the lists_,
+which have __O(n)__ time complexity. Though they all add up to some value of `x * O(n) + `O(n log n)`,
+we end up simplifying them into `O(n log n)`.
 
 ## Task4
-This taks runs in __O(n)__, due to the fact that we find many operations that are __O(1)__ as
- the different elemen are modified. Additionally there are several _full scans thorough the lists_,
-  which have __O(n)__ time complexity. Though they add up to some value of `x * O(n)`, we end up
-   simplyfiying them into `O(n)`.
+This takes runs in __O(n log n)__, due to the fact that we find list sorting operations, which have
+a time complexity of __O(n log n)__. In the code we find many operations that are __O(1)__ as
+the different elements are modified. Additionally there are several _full scans thorough the lists_,
+which have __O(n)__ time complexity. Though they all add up to some value of `x * O(n) + `O(n log n)`,
+we end up simplifying them into `O(n log n)`.
 
