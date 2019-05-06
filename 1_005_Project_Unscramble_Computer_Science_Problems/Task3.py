@@ -46,46 +46,41 @@ The percentage should have 2 decimal digits
 
 
 def bangalore_call(call):
-    bangalore_id = '(080)'
-    for interlocutor in [0, 1]:
-        if bangalore_id in call[interlocutor]:
-            return True, interlocutor
-    return False, -1
+    return call[0][0:5] == '(080)'
 
 
-def extract_area_code(call, call_bangalore_pos):
-    call_other_interloc = call[1 - call_bangalore_pos]
+def extract_area_code(call):
+    call_other_interloc = call[1]
 
-    if call_other_interloc[0] == '(':  # Fix land case
+    if call_other_interloc[:2] == '(0':  # Fix land case
         return call_other_interloc.split(sep=')')[0] + ')'
 
-    if len(call_other_interloc.split(sep=' ')) > 1:  # Mobile case
-        return call_other_interloc.split(sep=' ')[0]
-
-    else:  # Telemarketer case
+    if call_other_interloc[:3] == '140':  # Telemarketer case
         return call_other_interloc[:3]
+
+    else:  # Mobile case
+        return call_other_interloc[:4]
 
 
 if __name__ == '__main__':
-    bangalore_related_prefix = []
+    bng_called_prefix = []
     # Part A
     for call in calls:
-        is_bangalore_call, bangalore_interlocutor = bangalore_call(call)
-        if is_bangalore_call:
-            bangalore_related_prefix.append(extract_area_code(call, bangalore_interlocutor))
+        if bangalore_call(call):
+            bng_called_prefix.append(extract_area_code(call))
 
-    bng_related_prefix = list(set(bangalore_related_prefix))
-    bng_related_prefix.sort()
+    bng_called_prefix_resum = list(set(bng_called_prefix))
+    bng_called_prefix_resum.sort()
 
-    print("The numbers called by people in Bangalore have codes: \n")
-    for related_prefix in bng_related_prefix:
-        print(related_prefix + "\n")
+    print("\n The numbers called by people in Bangalore have codes:")
+    for related_prefix in bng_called_prefix_resum:
+        print(related_prefix)
 
     # Part B
     bng_recurrent_call_num = 0
-    for call_prefix in bangalore_related_prefix:
+    for call_prefix in bng_called_prefix:
         if call_prefix == "(080)":
             bng_recurrent_call_num += 1
 
-    print("{} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(
-       round(bng_recurrent_call_num/len(bangalore_related_prefix), 2)))
+    print("\n {} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(
+       round(bng_recurrent_call_num/len(bng_called_prefix)*100, 2)))

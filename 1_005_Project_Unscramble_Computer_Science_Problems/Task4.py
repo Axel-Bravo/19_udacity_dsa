@@ -39,9 +39,8 @@ if __name__ == '__main__':
                 call_sender not in message_receivers):
             call_senders_susp.append(call_sender)
 
-    call_senders_susp = list(call_senders_susp)
     call_senders_susp.sort()
 
-    print("These numbers could be telemarketers: \n")
+    print("\n These numbers could be telemarketers:")
     for call_senser_susp in call_senders_susp:
-        print(call_senser_susp + "\n")
+        print(call_senser_susp)
