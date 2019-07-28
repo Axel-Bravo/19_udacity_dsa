@@ -2,7 +2,7 @@
 Explanation of the different project submodules
 
 ## Project 1
-
+[pending]
 
 ## Project 2
 The recursion process, is based on the visit of each folder, on each folder we keep the files that match the desired pattern and we keep on going deeper on the folder structure by launching subsequent calls to the function. The decision not to use the provided assitance to detect if it was a __file__ or a __folder__, has been decided after not being able to properly use it (and also seeing the facility of coding my own solutions).
@@ -24,3 +24,17 @@ In respects to the study of the _time xomplexity_, is __O(Ln)__, being _**L**_ t
 The requirement to create an efficient algorithm that searches into this encapsulated structure, like a [_Matryoshka dolls_](https://en.wikipedia.org/wiki/Matryoshka_doll), as been satisfied by a __recursive algorithm__. 
 
 The time complexity of this algorithm is dependent on the size and structure employed to safe the data. Being the worst case of type __*O(n^n)*__.
+
+## Project 5
+This project is based on the creation of a linked list, though, in this case the list is __traversed backwards__ and has the attribute of __inmutability__. This has provoked, that some of the methods developped during the course for _linked list_ are not available for the _BLockchain list_:
+- prepend
+- remove
+- pop 
+- insert
+
+As for the time complexity, being a __linked list__ in its core strucutre, it has:
+
+- append: __O(1)__
+- search: __O(n)__
+- size: __O(n)__
+- to_list: __O(n)__
