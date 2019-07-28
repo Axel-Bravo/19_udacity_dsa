@@ -20,3 +20,7 @@ This has allowed to have a more encapsulated development, as well as, provinding
 
 In respects to the study of the _time xomplexity_, is __O(Ln)__, being _**L**_ the maximum length of a codeword; more references see [here](https://en.wikipedia.org/wiki/Huffman_coding#Optimality).
 
+## Project 4 
+The requirement to create an efficient algorithm that searches into this encapsulated structure, like a [_Matryoshka dolls_](https://en.wikipedia.org/wiki/Matryoshka_doll), as been satisfied by a __recursive algorithm__. 
+
+The time complexity of this algorithm is dependent on the size and structure employed to safe the data. Being the worst case of type __*O(n^n)*__.
