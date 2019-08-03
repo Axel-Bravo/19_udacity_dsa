@@ -36,3 +36,10 @@ digit of difference between them__.
 As the base of the algorithm is the __merge sort__, having a time complexity of __O(n*log(n))__, and there have been no
 substantial modifications to the algorithm; just the addition of __O(1)__ operations, the time complexity remains 
 _equal_.
+
+## Problem 4
+This problem is tackler as the construction of a output list, issue form the triple transverse of the elements, not the
+most elegant solution in therms of _time complexity_, though extremely efficient from a programing time point of view.
+
+### Time complexity
+In this case the _time complexity_ is precisely, _O(3n)_, being assimilated to __O(n)__.
