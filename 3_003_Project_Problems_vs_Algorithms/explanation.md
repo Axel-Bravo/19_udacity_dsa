@@ -47,5 +47,11 @@ In this case the _time complexity_ is precisely, _O(3n)_, being assimilated to _
 ## Problem 5
 This problem is focused on the development of the of a __trie__ a data structure derived from a _tree_, suited for a good ratio between _time and space_ complexity.
 
-### Time complexity: 
+### Time complexity
 For the __trie__, time complexity of **searching and inserting** from a trie depends on the length of the word **a** that’s being searched for, inserted, and the number of total words, **n**, making the runtime of these operations __O(a*n__).
+
+## Problem 6
+This problem focuses on __finding max and min values__ from an unsorted array, we are not required to nothing extra and here _lies the key_, not being required to sort anything, we can solve the problem with a single transversal and two placeholders, as reference for _min_ and _max_ values.
+
+### Time complexity
+In this case, we perform a __single transverse__ of the whole input, being the time complexity of __O(n)__.
