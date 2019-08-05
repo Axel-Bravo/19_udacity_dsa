@@ -43,3 +43,9 @@ most elegant solution in therms of _time complexity_, though extremely efficient
 
 ### Time complexity
 In this case the _time complexity_ is precisely, _O(3n)_, being assimilated to __O(n)__.
+
+## Problem 5
+This problem is focused on the development of the of a __trie__ a data structure derived from a _tree_, suited for a good ratio between _time and space_ complexity.
+
+### Time complexity: 
+For the __trie__, time complexity of **searching and inserting** from a trie depends on the length of the word **a** that’s being searched for, inserted, and the number of total words, **n**, making the runtime of these operations __O(a*n__).
