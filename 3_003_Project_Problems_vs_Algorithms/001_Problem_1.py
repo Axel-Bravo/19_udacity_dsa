@@ -42,6 +42,6 @@ print("Pass" if (4 == sqrt(16)) else "Fail")
 print("Pass \n" if (5 == sqrt(27)) else "Fail \n")
 
 # Edge cases
-print('Edge Cases')
+print('Edge Cases:')
 print("Pass" if (None == sqrt(-1)) else "Fail")
 print("Pass" if (99380 == sqrt(9876543210)) else "Fail")

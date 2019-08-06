@@ -35,7 +35,7 @@ recursion. In this case, it does the _comparison_, as usual, but then starts sav
 __alternative lists__, which are then returned as the results. 
 
 The usage of this _alternative list saving_ is due to the fact that having the list perfectly sorted, if we start from
-the index[0] and give alternatively a value to each list, occuping this value an increasing digit position, we 
+the index[0] and give alternatively a value to each list, occupying this value an increasing digit position, we 
 __always__ obtain a combination that satisfies the condition of having a __maximum sum of two numbers__ and __maximum a
 digit of difference between them__.  
 
@@ -47,11 +47,12 @@ step auxiliary created arrays, then the space complexity is of __O(n)__ (we have
 length of the input array).
 
 ## Problem 4
-This problem is tackler as the construction of a output list, issue form the triple transverse of the elements, not the
-most elegant solution in therms of _time complexity_, though extremely efficient from a programing time point of view.
+This problem is tackler as the construction of a output list, issue form a single transverse of the elements. By using,
+several pointers, it is possible on a __single transverse__ to properly order the provided array.
 
-### Time complexity
-In this case the _time complexity_ is precisely, _O(3n)_, being assimilated to __O(n)__.
+### Time and Space complexity
+In this case the _time complexity_ is precisely, __O(n)__. Analyzing the _space complexity_, due to the non usage of 
+__auxiliary tables__ (only a few pointers), it is of order __O(1)__ (excluding the input space).
 
 ## Problem 5
 This problem is focused on the development of the of a __trie__ a data structure derived from a _tree_, suited for a

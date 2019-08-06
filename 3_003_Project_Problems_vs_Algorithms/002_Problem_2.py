@@ -56,7 +56,7 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 10])
 print('\n')
 
 # Edge cases
-print('Edge Cases')
+print('Edge Cases:')
 test_function([[], -1])
 test_function([[1], 0])
 

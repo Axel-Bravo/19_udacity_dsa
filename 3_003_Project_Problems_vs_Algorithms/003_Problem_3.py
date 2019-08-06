@@ -123,7 +123,7 @@ else:
     print("Fail \n")
 
 # Edge cases
-print('Edge Cases')
+print('Edge Cases:')
 print('Test 4:')
 list_num = [1, 1, 1]
 result = rearrange_digits(input_list=list_num, first_layer=True)
