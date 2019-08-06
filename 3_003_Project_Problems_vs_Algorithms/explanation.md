@@ -10,9 +10,10 @@ word, bigger or smaller than our goal). Additionally, there is the inclusion of 
 the fact that the __square root__ of a natural number (starting from 2) is _half or less_, thus giving us a __speed 
 boost_ by starting with `end = number // 2`.
 
-### Time complexity:
+### Time and Space complexity:
 In this case time complexity is __O(log(n))__, as we transverse the _hypothetically ordered natural's number list_ by 
-using a __binary search approach__.
+using a __binary search approach__. As for the space complexity, it is __independent of the input__, requiring solely 
+pointers to different array locations; __O(1)__.
 
 ## Problem 2
 The principle employed in this algorithms is based directly in the _binary search_ algorithms, differently, to this 
@@ -23,7 +24,8 @@ could have been checked (though this would have increased our __time complexity_
 ### Time complexity
 The time complexity being an algorithm based on binary search is __O(log(n))__.  The number of iterations we perform,
 i.e. recursive depth, follows the rule of _recursive_depth^2 = n_. Thus if we isolate the number of iterations in
-relation to the __input space__ (n), we obtain __log(n) = recursive_depth__.
+relation to the __input space__ (n), we obtain __log(n) = recursive_depth__. As for the space complexity, it is 
+__independent of the input__, requiring solely pointers to different array locations; __O(1)__.
 
 ## Problem 3
 This problem, as stated to be solved in _time complexity_ of __O(n*log(n))__, has given the clue to be tackled by a 
