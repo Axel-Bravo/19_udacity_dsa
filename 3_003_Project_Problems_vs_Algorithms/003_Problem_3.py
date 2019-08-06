@@ -96,6 +96,8 @@ def test_function(test_case):
 
 
 #%% Testing - Official
+# Normal cases
+print('Normal Cases:')
 print('Test 1:')
 list_num = [1, 2, 3, 4, 5]
 result = rearrange_digits(input_list=list_num, first_layer=True)
@@ -116,6 +118,32 @@ print('Test 3:')
 list_num = [1, 2, 3]
 result = rearrange_digits(input_list=list_num, first_layer=True)
 if result == [31, 2]:
+    print('Pass \n')
+else:
+    print("Fail \n")
+
+# Edge cases
+print('Edge Cases')
+print('Test 4:')
+list_num = [1, 1, 1]
+result = rearrange_digits(input_list=list_num, first_layer=True)
+if result == [11, 1]:
+    print('Pass \n')
+else:
+    print("Fail \n")
+
+print('Test 5:')
+list_num = [1]
+result = rearrange_digits(input_list=list_num, first_layer=True)
+if result == [1]:
+    print('Pass \n')
+else:
+    print("Fail \n")
+
+print('Test 6:')
+list_num = []
+result = rearrange_digits(input_list=list_num, first_layer=True)
+if result == []:
     print('Pass \n')
 else:
     print("Fail \n")

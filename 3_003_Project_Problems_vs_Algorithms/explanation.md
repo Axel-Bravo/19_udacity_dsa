@@ -21,7 +21,7 @@ implementations, in its structure, it has been decided to be employed a __more d
 computationally expensive on previous levels to _spare_ some division; e.g. when the lists are of size 2, both values
 could have been checked (though this would have increased our __time complexity__). 
 
-### Time complexity
+### Time and Space complexity
 The time complexity being an algorithm based on binary search is __O(log(n))__.  The number of iterations we perform,
 i.e. recursive depth, follows the rule of _recursive_depth^2 = n_. Thus if we isolate the number of iterations in
 relation to the __input space__ (n), we obtain __log(n) = recursive_depth__. As for the space complexity, it is 
@@ -39,10 +39,12 @@ the index[0] and give alternatively a value to each list, occuping this value an
 __always__ obtain a combination that satisfies the condition of having a __maximum sum of two numbers__ and __maximum a
 digit of difference between them__.  
 
-### Time complexity 
+### Time and Space complexity 
 As the base of the algorithm is the __merge sort__, having a time complexity of __O(n*log(n))__, and there have been no
 substantial modifications to the algorithm; just the addition of __O(1)__ operations, the time complexity remains 
-_equal_.
+_equal_. As for the space complexity, if we hold the assumption that python gets automatically rid of each previous 
+step auxiliary created arrays, then the space complexity is of __O(n)__ (we have always arrays tat amount to the 
+length of the input array).
 
 ## Problem 4
 This problem is tackler as the construction of a output list, issue form the triple transverse of the elements, not the
