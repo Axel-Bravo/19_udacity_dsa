@@ -2,12 +2,17 @@
 Explanation of the different project submodules
 
 ## Problem 1
-The principle of this algorithm is to "think" that the square root of a number has the property of being the number to 
-the power of 2, hence the _floored squared root_ is given __when the floored divion result is the same as the divisor__.
+The principle of this algorithm is to implement a _variance of the binary search_, due to the required __time 
+complexity__. This time, though, instead of counting with an already sorted array, we use the _natural consecution_ to
+use as our __imaginary array__; the implementation relies on dividing the search space in two parts and checking at 
+each time if the __mid point power of 2__ is bigger or smaller than the given number (as in a dictionary, is the found 
+word, bigger or smaller than our goal). Additionally, there is the inclusion of a little _optimization trick_, this is
+the fact that the __square root__ of a natural number (starting from 2) is _half or less_, thus giving us a __speed 
+boost_ by starting with `end = number // 2`.
 
 ### Time complexity:
-In this case time complexity is __O(log(n))__, as we transverse all integer number till finding n (being _s_ the 
-number of times this is done); using the formula __s² = n__ , which is equivalent to __log(n)=s__.
+In this case time complexity is __O(log(n))__, as we transverse the _hypothetically ordered natural's number list_ by 
+using a __binary search approach__.
 
 ## Problem 2
 The principle employed in this algorithms is based directly in the _binary search_ algorithms, differently, to this 
