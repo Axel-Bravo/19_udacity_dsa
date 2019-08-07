@@ -1,5 +1,4 @@
 #%% Imports and function declaration
-
 class Group(object):
     def __init__(self, _name):
         self.name = _name
@@ -57,12 +56,18 @@ sub_child.add_user(sub_child_user)
 child.add_group(sub_child)
 parent.add_group(child)
 
-del child, sub_child, sub_child_user
-
-# Testing procedure
+# Normal Cases:
+print('Normal Cases:')
 print(is_user_in_group(user='parent_user', group=parent))
 # False
 print(is_user_in_group(user='child_user', group=parent))
 # False
-print(is_user_in_group(user='sub_child_user', group=parent))
+print(is_user_in_group(user='sub_child_user', group=parent), '\n')
 # True
+
+# Edge Cases:
+print('Edge Cases:')
+print(is_user_in_group(user='', group=parent))
+# False
+print(is_user_in_group(user='', group=child))
+# False
