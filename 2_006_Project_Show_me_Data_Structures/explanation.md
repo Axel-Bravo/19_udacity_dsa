@@ -26,15 +26,21 @@ dependent on __depth__ and __width__ of folders, resulting in a __O(d*w)__. As f
 it is directly dependent on the number of returns the function does, hence, the number of found files __f__, __O(f)__.
 
 ## Project 3
-The implementation of the [__Huffmann Algorithm__](https://en.wikipedia.org/wiki/Huffman_coding), has consisted _as pseudo code tasks were resolved_, in the construction of several __classes__, being:
+The implementation of the [__Huffmann Algorithm__](https://en.wikipedia.org/wiki/Huffman_coding), has consisted _as
+pseudo code tasks were resolved_, in the construction of several __classes__, being:
 1. Node
 2. Queue
 3. Tree
 4. HuffmanEncoder 
 
-This has allowed to have a more encapsulated development, as well as, provinding the project with a more consistent structure. The compresing algorithm has shown, for the tested example a reduction of almost 50% of its size. 
+This has allowed to have a more encapsulated development, as well as, providing the project with a more consistent
+structure. The compresing algorithm has shown, for the tested example a reduction of almost 50% of its size. 
 
-In respects to the study of the _time xomplexity_, is __O(Ln)__, being _**L**_ the maximum length of a codeword; more references see [here](https://en.wikipedia.org/wiki/Huffman_coding#Optimality).
+### Time and Space complexity
+In respects to the study of the _time complexity_, is __O(Ln)__, being _**L**_ the maximum length of a codeword; 
+more references see [here](https://en.wikipedia.org/wiki/Huffman_coding#Optimality). In respects to the _space 
+complexity_, it is directly related to the __size of the employed alphabet__, in this case **_k_**, resulting in 
+__O(k)__.
 
 ## Project 4 
 The requirement to create an efficient algorithm that searches into this encapsulated structure, like a [_Matryoshka dolls_](https://en.wikipedia.org/wiki/Matryoshka_doll), as been satisfied by a __recursive algorithm__. 

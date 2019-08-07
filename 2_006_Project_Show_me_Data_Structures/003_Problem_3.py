@@ -75,7 +75,7 @@ class Tree(object):
         """
 
         self.root = self._add_binary_code(self.root)
-        self.root.freq = -1
+        self.root.freq = 0
 
     @staticmethod
     def _add_binary_code(node: Node) -> Node:
@@ -199,12 +199,17 @@ def huffman_encoding(data: str) -> (str, HuffmanEncoder):
     :return: text encoded and the corresponding text specific encoder
     """
 
-    temp_queue = Queue(string=data)
-    temp_tree = Tree(queue=temp_queue)
-    temp_tree.binaryze()
-    temp_encoder = HuffmanEncoder(temp_tree)
+    if len(data) == 0:
+        print("Please introduce a non null string")
+        return
 
-    return temp_encoder.encode(data), temp_encoder
+    else:
+        temp_queue = Queue(string=data)
+        temp_tree = Tree(queue=temp_queue)
+        temp_tree.binaryze()
+        temp_encoder = HuffmanEncoder(temp_tree)
+
+        return temp_encoder.encode(data), temp_encoder
 
 
 def huffman_decoding(data: str, encoder: HuffmanEncoder) -> str:
@@ -214,12 +219,14 @@ def huffman_decoding(data: str, encoder: HuffmanEncoder) -> str:
     :param encoder: Huffman encoder used to initially encode the text
     :return: text decoded, i.e. originally restored
     """
+
     return encoder.decode(data)
 
 
 #%% Testing official
 if __name__ == "__main__":
 
+    # Normal Cases:
     # Case 1
     print('Case 1:')
 
@@ -293,3 +300,43 @@ if __name__ == "__main__":
     # The size of the decoded data is: 85
     print("The content of the encoded data is: {}\n".format(decoded_data))
     # The content of the encoded data is: The sun shines and I go to the beach
+
+
+    # Edge Cases
+    # Case 4
+    print('Edge Cases:')
+    print('Case 4:')
+
+    a_not_so_great_sentence = "aaa"
+
+    print("The size of the data is: {}\n".format(sys.getsizeof(a_not_so_great_sentence)))
+    # The size of the data is: 85
+    print("The content of the data is: {}\n".format(a_not_so_great_sentence))
+    # The content of the data is: The sun shines and I go to the beach
+
+    encoded_data, tree = huffman_encoding(a_not_so_great_sentence)
+
+    print("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
+    # The size of the encoded data is: 44
+    print("The content of the encoded data is: {}\n".format(encoded_data))
+    # The content of the encoded data is: 1001011011101000110011001001000111010000001011100010100110010100010110110
+    # 01101110000001000010000001000011101110110100111001110101110
+
+    decoded_data = huffman_decoding(encoded_data, tree)
+
+    print("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
+    # The size of the decoded data is: 85
+    print("The content of the encoded data is: {}\n".format(decoded_data))
+    # The content of the encoded data is: The sun shines and I go to the beach
+
+    # Case 5
+    print('Case 5:')
+    a_not_so_great_sentence = ""
+
+    print("The size of the data is: {}\n".format(sys.getsizeof(a_not_so_great_sentence)))
+    # The size of the data is: 85
+    print("The content of the data is: {}\n".format(a_not_so_great_sentence))
+    # The content of the data is: The sun shines and I go to the beach
+
+    huffman_encoding(a_not_so_great_sentence)
+    # Please introduce a non null string
