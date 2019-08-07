@@ -3,10 +3,13 @@ Explanation of the different project submodules
 
 ## Project 1
 For the __LRU_Cache__ problem, after thinking of using different approaches, like _queue, heap ..._, it has been decided
-to use a construction based on a dictionary for the __cache__ and a list for the __priority__. In respects to the
-limitation of the _cache_, any hashing approach has been discarded, as the __risk of collision__, hence the necessity 
-of adding a __nested hash__ (reaching __O(n)__). Finally deciding for this approach that satisfies the __O(1)__ 
-requirement. 
+to use a construction based on a dictionary for the __cache__ and a list for the __priority__. 
+
+### Time and Space complexity
+In respects to the limitation of the _cache_, any hashing approach has been discarded, as the __risk of collision__, 
+hence the necessity of adding a __nested hash__ (reaching __O(n)__). Finally deciding for this approach that satisfies
+the __O(1)__ requirement. As in therms of _space complexity_, the structure requires the usage of __2*c__, being __c__
+the desired *LRU_Cache* capacity; being it in the end assimilable to __O(n)__.
 
 ## Project 2
 The recursion process, is based on the visit of each folder, on each folder we keep the files that match the desired pattern and we keep on going deeper on the folder structure by launching subsequent calls to the function. The decision not to use the provided assitance to detect if it was a __file__ or a __folder__, has been decided after not being able to properly use it (and also seeing the facility of coding my own solutions).
