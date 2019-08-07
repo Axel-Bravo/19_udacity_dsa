@@ -86,6 +86,7 @@ def intersection(linkedlist_1: LinkedList, linkedlist_2: LinkedList) -> list:
 
 
 #%% Test Official
+# Normal Cases:
 # Test case 1
 linked_list_1 = LinkedList()
 linked_list_2 = LinkedList()
@@ -139,3 +140,41 @@ print(union(linked_list_5,linked_list_6))
 # [65, 1, 35, 4, 3, 6, 7, 8, 11, 21, 22, 23]
 print(intersection(linked_list_5,linked_list_6))
 # [65, 7]
+
+
+# Edge Cases:
+# Test case 4
+linked_list_7 = LinkedList()
+linked_list_8 = LinkedList()
+
+element_1 = []
+element_2 = [1, 7, 8]
+
+for i in element_1:
+    linked_list_7.append(i)
+
+for i in element_2:
+    linked_list_8.append(i)
+
+print(union(linked_list_7, linked_list_8))
+# [8, 7, 1]
+print(intersection(linked_list_7, linked_list_8))
+# []
+
+# Test case 5
+linked_list_9 = LinkedList()
+linked_list_10 = LinkedList()
+
+element_1 = []
+element_2 = []
+
+for i in element_1:
+    linked_list_9.append(i)
+
+for i in element_2:
+    linked_list_10.append(i)
+
+print(union(linked_list_9, linked_list_10))
+# []
+print(intersection(linked_list_9, linked_list_10))
+# []
