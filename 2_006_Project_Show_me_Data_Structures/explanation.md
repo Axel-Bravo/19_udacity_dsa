@@ -52,18 +52,24 @@ dependent on __encapsulation of groups__ and __number of users__ of folders, res
 _space complexity_, it is directly dependent on the number of returns the function does, hence, in this case __O(1)__.
 
 ## Project 5
-This project is based on the creation of a linked list, though, in this case the list is __traversed backwards__ and has the attribute of __inmutability__. This has provoked, that some of the methods developped during the course for _linked list_ are not available for the _BLockchain list_:
+This project is based on the creation of a linked list, though, in this case the list is __traversed backwards__ and
+has the attribute of __inmutability__. This has provoked, that some of the methods developed during the course for 
+_linked list_ are not available for the _Blockchain list_:
 - prepend
 - remove
 - pop 
 - insert
 
-As for the time complexity, being a __linked list__ in its core strucutre, it has:
+### Time and Space complexity
+As for the time complexity, being a __linked list__ in its core structure, it has:
 
 - append: __O(1)__
 - search: __O(n)__
 - size: __O(n)__
 - to_list: __O(n)__
+
+In respect to _space complexity_, it is directly dependant on the number of __nodes__ our BlockChain incorporates,
+resulting in __O(n)__.
 
 ## Project 5: 
 For the __union and intersection__ problem, the approach has been to transform the _linked lists_, a format which is harder to work with, on something much __simpler__ as is a list. Once the transformation has been done, the combination with the handy _object_ __sets__, has done all the work.

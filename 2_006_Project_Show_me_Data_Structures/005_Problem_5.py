@@ -41,14 +41,20 @@ class BlockChain(object):
 
     def search(self, data):
         """ Search the BlockChain for a node with the requested value and return the node. """
-        position_head = self.tail
 
-        while position_head.previous_hash:  # Moving to the start of the BlockChain
-            if position_head.data == data:
-                return position_head
-            position_head = position_head.previous_hash
+        if self.tail is None:
+            print("Please 'append' data on the BlockChain before searching for it")
+            return
 
-        return None
+        else:
+            position_head = self.tail
+
+            while position_head.previous_hash:  # Moving to the start of the BlockChain
+                if position_head.data == data:
+                    return position_head
+                position_head = position_head.previous_hash
+
+            return None
 
     def size(self):
         """ Return the size or length of the BlockChain. """
@@ -108,5 +114,11 @@ print(blockchain.search('my balance: 20 | cash flow: +125 | final balance: 145')
 # Timestamp: 1564305924.884146
 # Hash: 597f549af039dbb1c79d5e4ae5c347189cf7b8bafc12011f44b0cc06692ade9e
 
+
+# Edge Cases:
 print(blockchain.search('my balance: 1000 | cash flow: +100 | final balance: 1100'))
 # None
+
+blockchain = BlockChain()
+print(blockchain.search('my balance: 20 | cash flow: +125 | final balance: 145'))
+# Please 'append' data on the BlockChain before searching for it
