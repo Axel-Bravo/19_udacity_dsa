@@ -301,7 +301,6 @@ if __name__ == "__main__":
     print("The content of the encoded data is: {}\n".format(decoded_data))
     # The content of the encoded data is: The sun shines and I go to the beach
 
-
     # Edge Cases
     # Case 4
     print('Edge Cases:')
@@ -310,33 +309,32 @@ if __name__ == "__main__":
     a_not_so_great_sentence = "aaa"
 
     print("The size of the data is: {}\n".format(sys.getsizeof(a_not_so_great_sentence)))
-    # The size of the data is: 85
+    # The size of the data is: 52
     print("The content of the data is: {}\n".format(a_not_so_great_sentence))
-    # The content of the data is: The sun shines and I go to the beach
+    # The content of the data is: aaa
 
     encoded_data, tree = huffman_encoding(a_not_so_great_sentence)
 
     print("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
-    # The size of the encoded data is: 44
+    # The size of the encoded data is: 24
     print("The content of the encoded data is: {}\n".format(encoded_data))
-    # The content of the encoded data is: 1001011011101000110011001001000111010000001011100010100110010100010110110
-    # 01101110000001000010000001000011101110110100111001110101110
+    # The content of the encoded data is: 000
 
     decoded_data = huffman_decoding(encoded_data, tree)
 
     print("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
-    # The size of the decoded data is: 85
+    # The size of the decoded data is: 52
     print("The content of the encoded data is: {}\n".format(decoded_data))
-    # The content of the encoded data is: The sun shines and I go to the beach
+    # The content of the encoded data is: aaa
 
     # Case 5
     print('Case 5:')
     a_not_so_great_sentence = ""
 
     print("The size of the data is: {}\n".format(sys.getsizeof(a_not_so_great_sentence)))
-    # The size of the data is: 85
+    # The size of the data is: 49
     print("The content of the data is: {}\n".format(a_not_so_great_sentence))
-    # The content of the data is: The sun shines and I go to the beach
+    # The content of the data is:
 
     huffman_encoding(a_not_so_great_sentence)
     # Please introduce a non null string
