@@ -29,7 +29,7 @@ class LRU_Cache(object):
             return
 
         if key in self.cache:  # Update priority due to access
-            value = self.cache.pop(key)
+            self.cache.pop(key)
             self.cache[key] = value
 
         else:  # Add to cache
