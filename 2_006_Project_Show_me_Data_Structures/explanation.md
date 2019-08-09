@@ -80,9 +80,10 @@ with the handy _object_ __sets__, has done all the work.
 
 ### Time and Space complexity
 In the study of the __time complexity__, we find that the transformation from _linked list_ to list, takes __O(n)__
- time complexity, the the set function is in the __same or less__ order of magnitud, as for the variations:
-- _Union_: we find the creation of the final array, again __O(n)__, making __n*O(n)__ be resulting to __O(n)_
-- _Intersection_: we find the creation of the final array, which is a _double for-loop_, resulting finally in __O(n^n)__
+ time complexity, the the set function is in the __same or less__ order of magnitude, as for the variations:
+- _Union_: we find the creation of the final array, again __O(n)__, making __n*O(n)__ be resulting to __O(n)__
+- _Intersection_: we find the creation of the final array, which is a _double for-loop_ (operation _x in s_, acts with 
+ __O(n)__), resulting finally in __O(n^n)__
 
 In respect to the _space time complexity_, we generate for both functions, 3 auxiliary lists, being _O(3n)_; and 
 resulting in __O(n)__.
