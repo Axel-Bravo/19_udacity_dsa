@@ -1,10 +1,11 @@
 #%% Imports and function declaration
-class LRU_Cache(object):
+from collections import OrderedDict
 
+
+class LRU_Cache(object):
     def __init__(self, capacity):
         # Initialize class variables
-        self.cache = dict()
-        self.priority = []
+        self.cache = OrderedDict()
         self.capacity = capacity
 
     def get(self, key):
@@ -13,11 +14,11 @@ class LRU_Cache(object):
         try:  # If value in the cache
 
             # Update priority due to access
-            self.priority.remove(key)
-            self.priority.append(key)
-            return self.cache[key]
+            value = self.cache.pop(key)
+            self.cache[key] = value
+            return value
 
-        except KeyError and ValueError:
+        except KeyError:
             return -1
 
     def set(self, key, value):
@@ -27,20 +28,17 @@ class LRU_Cache(object):
             print("Can't perform operations on 0 capacity cache")
             return
 
-        if key in self.priority:  # Update priority due to access
-            self.priority.remove(key)
-            self.priority.append(key)
+        if key in self.cache:  # Update priority due to access
+            value = self.cache.pop(key)
             self.cache[key] = value
-        else:  # Add to cache
-            if len(self.priority) < self.capacity:  # Still space on cache
-                self.cache[key] = value
-                self.priority.append(key)
-            else:  # No space available on cache
-                key_remove = self.priority.pop(0)
-                self.cache.pop(key_remove)
 
+        else:  # Add to cache
+            if len(self.cache) < self.capacity:  # Still space on cache
                 self.cache[key] = value
-                self.priority.append(key)
+
+            else:  # No space available on cache
+                self.cache.popitem(last=False)
+                self.cache[key] = value
 
 
 #%% Testing Official
