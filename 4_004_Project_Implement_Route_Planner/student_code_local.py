@@ -6,6 +6,17 @@ Cost = namedtuple('Cost', ['total', 'journey', 'to_goal'])  # (float, float)
 Path = namedtuple('Path', ['cost', 'intersections', 'previous', 'frontier'])  # (Cost, [int, int ...], int, int)
 
 
+class Map(object):
+    """
+    Temporary class simulating the real 'Map' class, due to problems opening the pickle
+    No proper environment reproducibility
+    """
+
+    def __init__(self):
+        self.intersections = None
+        self.roads = None
+
+
 def euclidean_distance(origin_point: [float, float], destination_point: [float, float]) -> float:
     """
     Given two points returns their euclidean distance
@@ -29,7 +40,7 @@ def estimated_distance(path_frontier_point: [float, float], goal_point: [float, 
     return euclidean_distance(origin_point=path_frontier_point, destination_point=goal_point)
 
 
-def update_path(map: object, path: Path, new_frontier: int, goal: int) -> Path:
+def update_path(map: Map, path: Path, new_frontier: int, goal: int) -> Path:
     """
     Given a path and a next point, updates the path
     :param map: map of the current 2D space
@@ -53,7 +64,7 @@ def update_path(map: object, path: Path, new_frontier: int, goal: int) -> Path:
     return new_path
 
 
-def shortest_path(map: object, start: int, goal: int) -> list:
+def shortest_path(map: Map, start: int, goal: int) -> list:
     """
     Given a map and a start and end point, returns the shortest path, based on A* algorithm
     :param map: map of the current 2D space
@@ -64,7 +75,7 @@ def shortest_path(map: object, start: int, goal: int) -> list:
     paths = list()
     path_goal_min_val = float('inf')
     path_goal_min = None
-    
+
     # Check if already in goal
     if start == goal:
         return [start]
@@ -104,3 +115,36 @@ def shortest_path(map: object, start: int, goal: int) -> list:
         return path_goal_min
     else:
         return -1
+
+#%% Test - Dev- Data Preparations
+map_10 = Map()
+map_10.intersections = {
+    0: [0.7798606835438107, 0.6922727646627362],
+    1: [0.7647837074641568, 0.3252670836724646],
+    2: [0.7155217893995438, 0.20026498027300055],
+    3: [0.7076566826610747, 0.3278339270610988],
+    4: [0.8325506249953353, 0.02310946309985762],
+    5: [0.49016747075266875, 0.5464878695400415],
+    6: [0.8820353070895344, 0.6791919587749445],
+    7: [0.46247219371675075, 0.6258061621642713],
+    8: [0.11622158839385677, 0.11236327488812581],
+    9: [0.1285377678230034, 0.3285840695698353]}
+
+map_10.roads = [
+    [7, 6, 5],
+    [4, 3, 2],
+    [4, 3, 1],
+    [5, 4, 1, 2],
+    [1, 2, 3],
+    [7, 0, 3],
+    [0],
+    [0, 5],
+    [9],
+    [8]
+]
+
+#%%
+result = shortest_path(map=map_10, start=6, goal=5)
+
+
+
