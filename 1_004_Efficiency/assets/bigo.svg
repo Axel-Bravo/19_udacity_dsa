@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ """ To recover the Python script to generate this SVG, delete the line above -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-115 -1055 1152 1152">
+ <title>Comparison computational complexity</title>
+ <desc>Graphs number of operations, N vs number of input items, n for algorithms of common complexities, assumming a constant of 1, by CMG Lee.</desc>
+ <defs>
+  <pattern id="pattern_grid_1" patternUnits="userSpaceOnUse" width="10" height="10">
+   <rect x="0" y="0" width="9999" height="9999" stroke="#cccccc" stroke-width="1" fill="none"/>
+  </pattern>
+  <pattern id="pattern_grid_5" patternUnits="userSpaceOnUse" width="50" height="50">
+   <rect x="0" y="0" width="9999" height="9999" stroke="#cccccc" stroke-width="2" fill="url(#pattern_grid_1)"/>
+  </pattern>
+  <pattern id="pattern_grid_10" patternUnits="userSpaceOnUse" width="100" height="100">
+   <rect x="0" y="0" width="9999" height="9999" stroke="#cccccc" stroke-width="4" fill="url(#pattern_grid_5)"/>
+  </pattern>
+  <rect id="grid"  x="0" y="-1000" width="1000" height="1000" stroke="#000000" fill="url(#pattern_grid_10)"/>
+  <rect id="inset" x="0" y="-70"   width="70"   height="70"   stroke="#000000" fill="url(#pattern_grid_10)"/>
+  <clipPath id="clip_grid" ><use xlink:href="#grid" /></clipPath>
+  <clipPath id="clip_inset"><use xlink:href="#inset"/></clipPath>
+  <path id="arrowhead" d="M4,-2 L0,0 L4,2" fill="none"/>
+  <g id="graphs">
+<!-- BEGIN_DYNAMIC_SVG { -->
+   <text transform="translate(550,  -30)" x="0" y="0.7ex" fill="#cc00ff"><tspan>1</tspan></text>
+   <path d="M 0,-10 L 10,-10 L 20,-10 L 30,-10 L 40,-10 L 50,-10 L 60,-10 L 70,-10 L 80,-10 L 90,-10 L 100,-10 L 110,-10 L 120,-10 L 130,-10 L 140,-10 L 150,-10 L 160,-10 L 170,-10 L 180,-10 L 190,-10 L 200,-10 L 210,-10 L 220,-10 L 230,-10 L 240,-10 L 250,-10 L 260,-10 L 270,-10 L 280,-10 L 290,-10 L 300,-10 L 310,-10 L 320,-10 L 330,-10 L 340,-10 L 350,-10 L 360,-10 L 370,-10 L 380,-10 L 390,-10 L 400,-10 L 410,-10 L 420,-10 L 430,-10 L 440,-10 L 450,-10 L 460,-10 L 470,-10 L 480,-10 L 490,-10 L 500,-10 L 510,-10 L 520,-10 L 530,-10 L 540,-10 L 550,-10 L 560,-10 L 570,-10 L 580,-10 L 590,-10 L 600,-10 L 610,-10 L 620,-10 L 630,-10 L 640,-10 L 650,-10 L 660,-10 L 670,-10 L 680,-10 L 690,-10 L 700,-10 L 710,-10 L 720,-10 L 730,-10 L 740,-10 L 750,-10 L 760,-10 L 770,-10 L 780,-10 L 790,-10 L 800,-10 L 810,-10 L 820,-10 L 830,-10 L 840,-10 L 850,-10 L 860,-10 L 870,-10 L 880,-10 L 890,-10 L 900,-10 L 910,-10 L 920,-10 L 930,-10 L 940,-10 L 950,-10 L 960,-10 L 970,-10 L 980,-10 L 990,-10 L 1000,-10" stroke="#cc00ff" stroke-dasharray="32,4,32,4,4,4,4,4" clip-path="url(#clip_grid)"/>
+   <text transform="translate(925,  -45)" x="0" y="0.7ex" fill="#0000ff"><tspan>log&#8322;</tspan><tspan font-style="italic">n</tspan><tspan></tspan></text>
+   <path d="M 10,-0 L 20,-10 L 30,-16 L 40,-20 L 50,-23 L 60,-26 L 70,-28 L 80,-30 L 90,-32 L 100,-33 L 110,-35 L 120,-36 L 130,-37 L 140,-38 L 150,-39 L 160,-40 L 170,-41 L 180,-42 L 190,-42 L 200,-43 L 210,-44 L 220,-45 L 230,-45 L 240,-46 L 250,-46 L 260,-47 L 270,-48 L 280,-48 L 290,-49 L 300,-49 L 310,-50 L 320,-50 L 330,-50 L 340,-51 L 350,-51 L 360,-52 L 370,-52 L 380,-52 L 390,-53 L 400,-53 L 410,-54 L 420,-54 L 430,-54 L 440,-55 L 450,-55 L 460,-55 L 470,-56 L 480,-56 L 490,-56 L 500,-56 L 510,-57 L 520,-57 L 530,-57 L 540,-58 L 550,-58 L 560,-58 L 570,-58 L 580,-59 L 590,-59 L 600,-59 L 610,-59 L 620,-60 L 630,-60 L 640,-60 L 650,-60 L 660,-60 L 670,-61 L 680,-61 L 690,-61 L 700,-61 L 710,-61 L 720,-62 L 730,-62 L 740,-62 L 750,-62 L 760,-62 L 770,-63 L 780,-63 L 790,-63 L 800,-63 L 810,-63 L 820,-64 L 830,-64 L 840,-64 L 850,-64 L 860,-64 L 870,-64 L 880,-65 L 890,-65 L 900,-65 L 910,-65 L 920,-65 L 930,-65 L 940,-66 L 950,-66 L 960,-66 L 970,-66 L 980,-66 L 990,-66 L 1000,-66" stroke="#0000ff" stroke-dasharray="32,4,4,4,4,4" clip-path="url(#clip_grid)"/>
+   <text transform="translate(925, -125)" x="0" y="0.7ex" fill="#0099cc"><tspan>&#8730;</tspan><tspan font-style="italic">n</tspan><tspan></tspan></text>
+   <path d="M 0,-0 L 10,-10 L 20,-14 L 30,-17 L 40,-20 L 50,-22 L 60,-24 L 70,-26 L 80,-28 L 90,-30 L 100,-32 L 110,-33 L 120,-35 L 130,-36 L 140,-37 L 150,-39 L 160,-40 L 170,-41 L 180,-42 L 190,-44 L 200,-45 L 210,-46 L 220,-47 L 230,-48 L 240,-49 L 250,-50 L 260,-51 L 270,-52 L 280,-53 L 290,-54 L 300,-55 L 310,-56 L 320,-57 L 330,-57 L 340,-58 L 350,-59 L 360,-60 L 370,-61 L 380,-62 L 390,-62 L 400,-63 L 410,-64 L 420,-65 L 430,-66 L 440,-66 L 450,-67 L 460,-68 L 470,-69 L 480,-69 L 490,-70 L 500,-71 L 510,-71 L 520,-72 L 530,-73 L 540,-73 L 550,-74 L 560,-75 L 570,-75 L 580,-76 L 590,-77 L 600,-77 L 610,-78 L 620,-79 L 630,-79 L 640,-80 L 650,-81 L 660,-81 L 670,-82 L 680,-82 L 690,-83 L 700,-84 L 710,-84 L 720,-85 L 730,-85 L 740,-86 L 750,-87 L 760,-87 L 770,-88 L 780,-88 L 790,-89 L 800,-89 L 810,-90 L 820,-91 L 830,-91 L 840,-92 L 850,-92 L 860,-93 L 870,-93 L 880,-94 L 890,-94 L 900,-95 L 910,-95 L 920,-96 L 930,-96 L 940,-97 L 950,-97 L 960,-98 L 970,-98 L 980,-99 L 990,-99 L 1000,-100" stroke="#0099cc" stroke-dasharray="32,4,4,4,32,4" clip-path="url(#clip_grid)"/>
+   <text transform="translate(950,-1030)" x="0" y="0.7ex" fill="#00cc00"><tspan></tspan><tspan font-style="italic">n</tspan><tspan></tspan></text>
+   <path d="M 0,0 L 10,-10 L 20,-20 L 30,-30 L 40,-40 L 50,-50 L 60,-60 L 70,-70 L 80,-80 L 90,-90 L 100,-100 L 110,-110 L 120,-120 L 130,-130 L 140,-140 L 150,-150 L 160,-160 L 170,-170 L 180,-180 L 190,-190 L 200,-200 L 210,-210 L 220,-220 L 230,-230 L 240,-240 L 250,-250 L 260,-260 L 270,-270 L 280,-280 L 290,-290 L 300,-300 L 310,-310 L 320,-320 L 330,-330 L 340,-340 L 350,-350 L 360,-360 L 370,-370 L 380,-380 L 390,-390 L 400,-400 L 410,-410 L 420,-420 L 430,-430 L 440,-440 L 450,-450 L 460,-460 L 470,-470 L 480,-480 L 490,-490 L 500,-500 L 510,-510 L 520,-520 L 530,-530 L 540,-540 L 550,-550 L 560,-560 L 570,-570 L 580,-580 L 590,-590 L 600,-600 L 610,-610 L 620,-620 L 630,-630 L 640,-640 L 650,-650 L 660,-660 L 670,-670 L 680,-680 L 690,-690 L 700,-700 L 710,-710 L 720,-720 L 730,-730 L 740,-740 L 750,-750 L 760,-760 L 770,-770 L 780,-780 L 790,-790 L 800,-800 L 810,-810 L 820,-820 L 830,-830 L 840,-840 L 850,-850 L 860,-860 L 870,-870 L 880,-880 L 890,-890 L 900,-900 L 910,-910 L 920,-920 L 930,-930 L 940,-940 L 950,-950 L 960,-960 L 970,-970 L 980,-980 L 990,-990 L 1000,-1000" stroke="#00cc00" stroke-dasharray="32,4,4,4" clip-path="url(#clip_grid)"/>
+   <text transform="translate(310,-1030)" x="0" y="0.7ex" fill="#ff9900"><tspan></tspan><tspan font-style="italic">n</tspan><tspan>&#160;log&#8322;</tspan><tspan font-style="italic">n</tspan><tspan></tspan></text>
+   <path d="M 10,-0 L 20,-20 L 30,-48 L 40,-80 L 50,-116 L 60,-155 L 70,-197 L 80,-240 L 90,-285 L 100,-332 L 110,-381 L 120,-430 L 130,-481 L 140,-533 L 150,-586 L 160,-640 L 170,-695 L 180,-751 L 190,-807 L 200,-864 L 210,-922 L 220,-981 L 230,-1040" stroke="#ff9900" stroke-dasharray="4,0" clip-path="url(#clip_grid)"/>
+   <text transform="translate(125,-1030)" x="0" y="0.7ex" fill="#ff0000"><tspan></tspan><tspan font-style="italic">n</tspan><tspan>&#178;</tspan></text>
+   <path d="M 0,-0 L 10,-10 L 20,-40 L 30,-90 L 40,-160 L 50,-250 L 60,-360 L 70,-490 L 80,-640 L 90,-810 L 100,-1000 L 110,-1210" stroke="#ff0000" stroke-dasharray="32,8" clip-path="url(#clip_grid)"/>
+   <text transform="translate( 73,-1030)" x="0" y="0.7ex" fill="#cc6600"><tspan>2</tspan><tspan font-style="italic">&#8319;</tspan><tspan></tspan></text>
+   <path d="M 0,-10 L 10,-20 L 20,-40 L 30,-80 L 40,-160 L 50,-320 L 60,-640 L 70,-1280" stroke="#cc6600" stroke-dasharray="16,6" clip-path="url(#clip_grid)"/>
+   <text transform="translate( 25,-1030)" x="0" y="0.7ex" fill="#000000"><tspan></tspan><tspan font-style="italic">n</tspan><tspan>!</tspan></text>
+   <path d="M 0,-10 L 10,-10 L 20,-20 L 30,-60 L 40,-240 L 50,-1200" stroke="#000000" stroke-dasharray="4,4" clip-path="url(#clip_grid)"/>
+<!-- } END_DYNAMIC_SVG -->
+  </g>
+ </defs>
+ <g id="main" font-family="Helvetica,Arial,sans-serif" font-size="50" text-anchor="middle" stroke-linejoin="round" stroke="none" fill="none">
+  <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+  <use xlink:href="#grid"/>
+  <g fill="#666666">
+   <g transform="translate(0,50)">
+    <text x="550" y="40" font-style="italic">n</text>
+    <text x="0"   y="0"  >0</text>
+    <text x="100" y="0" >10</text>
+    <text x="200" y="0" >20</text>
+    <text x="300" y="0" >30</text>
+    <text x="400" y="0" >40</text>
+    <text x="500" y="0" >50</text>
+    <text x="600" y="0" >60</text>
+    <text x="700" y="0" >70</text>
+    <text x="800" y="0" >80</text>
+    <text x="900" y="0" >90</text>
+    <text x="995" y="0">100</text>
+   </g>
+   <g transform="translate(-45,20)">
+    <text x="-50" y="-550" font-style="italic">N</text>
+    <text x="0" y="-0"     >0</text>
+    <text x="0" y="-100"  >10</text>
+    <text x="0" y="-200"  >20</text>
+    <text x="0" y="-300"  >30</text>
+    <text x="0" y="-400"  >40</text>
+    <text x="0" y="-500"  >50</text>
+    <text x="0" y="-600"  >60</text>
+    <text x="0" y="-700"  >70</text>
+    <text x="0" y="-800"  >80</text>
+    <text x="0" y="-900"  >90</text>
+    <text x="0" y="-1000">100</text>
+   </g>
+  </g>
+  <use xlink:href="#graphs" stroke-width="4"/>
+  <!--
+  <rect x="0" y="-50" width="50" height="50" stroke="#000000" fill="url(#pattern_grid_10)"/>
+  <g transform="translate(250,-250) scale(10)" clip-path="url(#clip_inset)">
+   <use xlink:href="#inset"/>
+   <use xlink:href="#graphs"/>
+  </g>
+  -->
+ </g>
+</svg>
+<!-- Please retain this and other comments, which contain Python code to generate this SVG. """
+import re, math
+
+class dict2class(dict): ## http://stackoverflow.com/questions/16237659
+ def __getattr__(self, key): return self[key]
+
+def fmt(string): ## string.format(**vars()) using tags {expression!format} by CMG Lee
+ def f(tag): i_sep = tag.rfind('!'); return (re.sub('\.0+$', '', str(eval(tag[1:-1])))
+  if (i_sep < 0) else ('{:%s}' % tag[i_sep + 1:-1]).format(eval(tag[1:i_sep])))
+ return (re.sub(r'(?<!{){[^{}]+}', lambda m:f(m.group()), string)
+         .replace('{{', '{').replace('}}', '}'))
+def append(obj, string): return obj.append(fmt(string))
+
+def hex_rgb(colour): ## convert [#]RGB to #RRGGBB and [#]RRGGBB to #RRGGBB
+ return '#%s' % (colour if len(colour) > 4 else ''.join([c*2 for c in colour])).replace('#','')
+
+def x(x_coord): return  10 * x_coord
+def y(y_coord): return -10 * y_coord
+
+def log(n): return math.log(n) / math.log(2)
+
+GRAPHS = [
+ {'label':"1"                         ,'colour':'c0f','translate':'550,  -30','dash':'32,4,32,4,4,4,4,4','formula':lambda n:1                },
+ {'label':"log&#8322;''n''"           ,'colour':'00f','translate':'925,  -45','dash':'32,4,4,4,4,4'     ,'formula':lambda n:log(n)           },
+ {'label':"&#8730;''n''"              ,'colour':'09c','translate':'925, -125','dash':'32,4,4,4,32,4'    ,'formula':lambda n:math.sqrt(n)     },
+ {'label':"''n''"                     ,'colour':'0c0','translate':'950,-1030','dash':'32,4,4,4'         ,'formula':lambda n:n                },
+ {'label':"''n''&#160;log&#8322;''n''",'colour':'f90','translate':'310,-1030','dash':'4,0'              ,'formula':lambda n:n * log(n)       },
+ {'label':"''n''&#178;"               ,'colour':'f00','translate':'125,-1030','dash':'32,8'             ,'formula':lambda n:math.pow(n, 2)   },
+ {'label':"2''&#8319;''"              ,'colour':'c60','translate':' 73,-1030','dash':'16,6'             ,'formula':lambda n:math.pow(2, n)   },
+ {'label':"''n''!"                    ,'colour':'000','translate':' 25,-1030','dash':'4,4'              ,'formula':lambda n:math.factorial(n)},
+]
+N_MAX = 100
+outs  = []
+for graph in GRAPHS:
+ out_paths        = []
+ is_continue_plot = True
+ for n in range(N_MAX + 1):
+  try:
+   if (is_continue_plot):
+    complexity = graph['formula'](n)
+    # print(fmt("{graph['label']}\t{n}\t{complexity}"))
+    append(out_paths, '{x(n)},{y(complexity)!.0f}')
+   if (complexity > N_MAX): is_continue_plot = False
+  except ValueError: pass
+ colour = hex_rgb(graph['colour'])
+ label  = '<tspan>%s</tspan>' % (re.sub(r"''(.*?)''", r'</tspan><tspan font-style="italic">\1</tspan><tspan>', graph['label']))
+ append(outs, '''\
+   <text transform="translate({graph['translate']})" x="0" y="0.7ex" fill="{colour}">{label}</text>
+   <path d="M {' L '.join(out_paths)}" stroke="{colour}" stroke-dasharray="{graph['dash']}" clip-path="url(#clip_grid)"/>''')
+
+out_size = 'width="100%" height="100%" viewBox="-115 -1055 1152 1152"'
+
+## Compile everything into an .svg file
+myself   = open(__file__, 'r').read() ## the contents of this very file
+file_out = open(__file__[:__file__.rfind('.')] + '.svg', 'w') ## *.* -> *.svg
+try: ## use try/finally so that file is closed even if write fails
+ file_out.write('''<?xml version="1.0" encoding="utf-8"?><!%s
+ %s%s%s\n%s%s''' % ('-' + '-', ## because SVG comments cannot have 2 consecutive '-'s
+  myself[ : myself.find('width',myself.find('<svg'))], ## assume width specified before height/viewBox
+  out_size, ## replace SVG width/height/viewBox with {out_size} & dynamic SVG block with {outs} content
+  myself[myself.find('>',myself.find('<svg')) : myself.find('\n',myself.find('BEGIN_'+'DYNAMIC_SVG'))],
+  '\n'.join(outs), myself[myself.rfind('\n',0,myself.find('END_'+'DYNAMIC_SVG')) : ]))
+finally:
+ file_out.close()
+## SVG-Python near-polyglot framework version 2 by CMG Lee (Feb 2016) -->
