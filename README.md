@@ -13,3 +13,5 @@ Learn and implement basic algorithms such as searching and sorting on different 
 
 ### Advanced Algorithms
 Build on your algorithm skills by learning more advanced algorithms such as brute-force greedy algorithms, graph algorithms, and dynamic programming which optimizes recursion by storing results to sub problems.
+
+_Disclaimer:_ this material is provided as a guide, __its purpose is not to be copied__ and presented as genuine, on Udacities' _project submissions_. Udacities' courses are a journey, __the certificate does not make you knowledgeable, it's the experiencie you gain while you work through it!__
